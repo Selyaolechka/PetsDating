@@ -83,66 +83,78 @@
                     <li><a href="index-2.html">Статьи</a></li>
                 </ul>
             </nav>
+            <nav class="navbar navbar-default navbar-static-top tm_navbar clearfix pull-right" role="navigation">
+                <ul class="nav sf-menu clearfix sf-js-enabled sf-arrows">
+                    <li class="active"><a href="">Личный кабинет</a></li>
+                    <li class="sub-menu"><a href="" class="sf-with-ul">Сообщения</a></li>
+                    <li><a href="">Избранное</a></li>
+                    <li><a href="">Вход</a></li></li>
+                    <li><a href="">Регистрация</a></li></li>
+                </ul>
+            </nav>
         </div>
     </div>
-            <div class="container">
-                <div class="col-lg-3 col-md-6 col-sm-10">
-                    <fieldset class="searchFilter-breed">
-                        <label for="breed">Порода</label>
-                        <input list="breed" name="breed">
-                        <datalist id="breed">
-                            <option value="Канадский сфинкс" />
-                            <option value="Бенгальская" />
-                            <option value="Аббисинская" />
-                            <option value="Мейн-кун" />
-                            <option value="Сиамская" />
-                        </datalist>
-                    </fieldset>
-                </div>
-                <div class="col-lg-2 col-md-6 col-sm-10">
-                    <fieldset class="searchFilter-sex">
-                        <label for="sex">Пол</label>
-                        <select id="sex" name="sex">
-                            <option value="male"> Самец</option>
-                            <option value="female">Самочка</option>
-                        </select>
-                    </fieldset>
-                </div>
-                <div class="col-lg-1 col-md-6 col-sm-10">
-                    <fieldset class="searchFilter-age">
-                        <label for="age">Возраст</label>
-                        <input type="number" id="age" min="1" max="10" step="1" value="1" placeholder="Возраст">
-                    </fieldset>
-                </div>        
-                <div class="col-lg-3 col-md-6 col-sm-10">
-                    <fieldset class="searchFilter-city">
-                        <label for="city">Город</label>
-                        <input list="city" name="city">
-                        <datalist id="city">
-                            <option value="Киев" />
-                            <option value="Одесса" />
-                            <option value="Днепропетровск" />
-                            <option value="Харьков" />
-                            <option value="Львов" />
-                        </datalist>
-                    </fieldset>
-                </div>
-                <div class="col-lg-3 col-md-6 col-sm-10">
-                    <fieldset class="searchFilter-city">
-                        <label for="city">Питомник</label>
-                        <input list="city" name="city">
-                        <datalist id="city">
-                            <option value="MikkiStar" />
-                            <option value="MikkiStar" />
-                            <option value="MikkiStar" />
-                            <option value="MikkiStar" />
-                            <option value="MikkiStar" />
-                        </datalist>
-                    </fieldset>
-                </div>
-                <div class="btn btn-blue searchFilter-apply" onclick="peopleFeatures.filter.applyClick();">Найти</div>
-            </div>
+    <div class="container filters uk-margin-top">
+        <div class="col-lg-2 col-md-6 col-sm-10">
+            <fieldset class="searchFilter-breed">
+                <label class="offscreen" for="breed">Порода</label>
+                <input list="breed" name="breed" placeholder="Порода">
+                <datalist id="breed">
+                    <option value="Канадский сфинкс" />
+                    <option value="Бенгальская" />
+                    <option value="Аббисинская" />
+                    <option value="Мейн-кун" />
+                    <option value="Сиамская" />
+                </datalist>
+            </fieldset>
         </div>
+        <div class="col-lg-2 col-md-6 col-sm-10">
+            <fieldset class="searchFilter-sex">
+                <label for="sex">Пол</label>
+                <select id="sex" name="sex">
+                    <option value="" disabled selected>Пол</option>
+                    <option value="male"> Самец</option>
+                    <option value="female">Самочка</option>
+                </select>
+            </fieldset>
+        </div>
+        <div class="col-lg-2 col-md-6 col-sm-10">
+            <fieldset class="searchFilter-age">
+                <label for="age">Возраст</label>
+                <input type="number" id="age" min="1" max="10" step="1" value="1" placeholder="Возраст">
+            </fieldset>
+        </div>        
+        <div class="col-lg-3 col-md-6 col-sm-10">
+            <fieldset class="searchFilter-city">
+                <label for="city">Город</label>
+                <input list="city" name="city" placeholder="Город">
+                <datalist id="city">
+                    <option value="Киев" />
+                    <option value="Одесса" />
+                    <option value="Днепропетровск" />
+                    <option value="Харьков" />
+                    <option value="Львов" />
+                </datalist>
+            </fieldset>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-10">
+            <fieldset class="searchFilter-breeder">
+                <label for="breeder">Питомник</label>
+                <input list="breeder" name="breeder" placeholder="Питомник">
+                <datalist id="breeder">
+                    <option value="MikkiStar" />
+                    <option value="MikkiStar" />
+                    <option value="MikkiStar" />
+                    <option value="MikkiStar" />
+                    <option value="MikkiStar" />
+                </datalist>
+            </fieldset>
+        </div>
+    </div>
+    <div class="container uk-margin-top filters clearfix">
+        <button class="btn btn-success searchFilter-apply pull-right" onclick="">Найти</button>
+        <button class="btn btn-warning searchFilter-apply pull-right"  onclick="">Сбросить фильтр</button>
+    </div>
 </header>
 <!--content-->
 <div class="content"> 
@@ -412,14 +424,18 @@
 <!--footer-->
 <footer> 
     <div class="container">
-        <p class="wow fadeInUp animated">Â© <em id="copyright-year">2015</em> <span></span> <a href="index-5.html">Py</a></p>
-        <ul class="foo_menu wow fadeInUp animated" data-wow-delay="0.1s" >
-            <li class="active"><a href="index.html">main</a></li>
+        <p class="wow fadeInUp animated pull-left">Â© <em id="copyright-year">2015</em> <span></span> <a href="index-5.html">Py</a></p>
+        <ul class="foo_menu wow fadeInUp animated pull-right" data-wow-delay="0.1s" >
             <li><a href="index-1.html">about</a></li>
-            <li><a href="index-2.html">for sale</a></li>
-            <li><a href="index-3.html">tips &amp; advice</a></li>
             <li><a href="index-4.html">contacts</a></li>
         </ul>
+        <ul class="follow_icon wow fadeInUp animated animated pull-right" style="visibility: visible; animation-name: fadeInUp;">
+            <li><a href="#" class="fa fa-linkedin"></a></li>
+            <li><a href="#" class="fa fa-google-plus"></a></li>
+            <li><a href="#" class="fa fa-facebook"></a></li>
+            <li><a href="#" class="fa fa-rss"></a></li>
+        </ul>
+
     </div>
   <!-- {%FOOTER_LINK} -->
 </footer>

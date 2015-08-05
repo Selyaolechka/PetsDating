@@ -62,32 +62,98 @@
 <header>
     <div class="box">
         <div class="container">
-            <h1 class="navbar-brand navbar-brand_ wow fadeInDown animated" data-wow-delay="0.2s">
-            	<a href="index.html"><img src="img/logo.png" alt="logo"></a>
+            <h1 class="navbar-brand navbar-brand_ wow fadeInDown animated pull-left" data-wow-delay="0.2s">
+                <a href="index.html"><img src="img/icons/logo.png" alt="logo"></a>
             </h1>
+            <nav class="navbar navbar-default navbar-static-top tm_navbar clearfix pull-left" role="navigation">
+                <ul class="nav sf-menu clearfix sf-js-enabled sf-arrows">
+                    <li class="active"><a href="index.html">Поиск Анкет</a></li>
+                    <li class="sub-menu"><a href="index-1.html" class="sf-with-ul">Анонс событий</a><span></span>
+                        <ul class="submenu sub-menu">
+                            <li><a href="#">staff</a></li>
+                            <li><a href="#" class="sf-with-ul">history</a><span class="fa fa-angle-right"></span>
+                                <ul class="submenu sub-menu">
+                                    <li><a href="#">fresh</a></li>
+                                    <li><a href="#">archive</a></li>
+                                </ul> 
+                            </li>
+                            <li><a href="#">news</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="index-2.html">Статьи</a></li>
+                </ul>
+            </nav>
+            <nav class="navbar navbar-default navbar-static-top tm_navbar clearfix pull-right" role="navigation">
+                <ul class="nav sf-menu clearfix sf-js-enabled sf-arrows">
+                    <li class="active"><a href="">Личный кабинет</a></li>
+                    <li class="sub-menu"><a href="" class="sf-with-ul">Сообщения</a></li>
+                    <li><a href="">Избранное</a></li>
+                    <li><a href="">Вход</a></li></li>
+                    <li><a href="">Регистрация</a></li></li>
+                </ul>
+            </nav>
         </div>
     </div>
-    <div class="container">
-        <nav class="navbar navbar-default navbar-static-top tm_navbar clearfix" role="navigation">
-            <ul class="nav sf-menu clearfix sf-js-enabled sf-arrows">
-                <li class="active"><a href="index.html">main</a></li>
-                <li class="sub-menu"><a href="index-1.html" class="sf-with-ul">about</a><span></span>
-                    <ul class="submenu sub-menu">
-        				<li><a href="#">staff</a></li>
-        				<li><a href="#" class="sf-with-ul">history</a><span class="fa fa-angle-right"></span>
-                            <ul class="submenu sub-menu">
-                                <li><a href="#">fresh</a></li>
-                                <li><a href="#">archive</a></li>
-                            </ul> 
-                        </li>
-        				<li><a href="#">news</a></li>
-        			</ul>
-                </li>
-                <li><a href="index-2.html">for sale</a></li>
-                <li><a href="index-3.html">tips &amp; advice</a></li>
-                <li><a href="index-4.html">contacts</a></li>
-            </ul>
-        </nav>
+    <div class="container filters uk-margin-top">
+        <div class="col-lg-2 col-md-6 col-sm-10">
+            <fieldset class="searchFilter-breed">
+                <label class="offscreen" for="breed">Порода</label>
+                <input list="breed" name="breed" placeholder="Порода">
+                <datalist id="breed">
+                    <option value="Канадский сфинкс" />
+                    <option value="Бенгальская" />
+                    <option value="Аббисинская" />
+                    <option value="Мейн-кун" />
+                    <option value="Сиамская" />
+                </datalist>
+            </fieldset>
+        </div>
+        <div class="col-lg-2 col-md-6 col-sm-10">
+            <fieldset class="searchFilter-sex">
+                <label for="sex">Пол</label>
+                <select id="sex" name="sex">
+                    <option value="" disabled selected>Пол</option>
+                    <option value="male"> Самец</option>
+                    <option value="female">Самочка</option>
+                </select>
+            </fieldset>
+        </div>
+        <div class="col-lg-2 col-md-6 col-sm-10">
+            <fieldset class="searchFilter-age">
+                <label for="age">Возраст</label>
+                <input type="number" id="age" min="1" max="10" step="1" value="1" placeholder="Возраст">
+            </fieldset>
+        </div>        
+        <div class="col-lg-3 col-md-6 col-sm-10">
+            <fieldset class="searchFilter-city">
+                <label for="city">Город</label>
+                <input list="city" name="city" placeholder="Город">
+                <datalist id="city">
+                    <option value="Киев" />
+                    <option value="Одесса" />
+                    <option value="Днепропетровск" />
+                    <option value="Харьков" />
+                    <option value="Львов" />
+                </datalist>
+            </fieldset>
+        </div>
+        <div class="col-lg-3 col-md-6 col-sm-10">
+            <fieldset class="searchFilter-breeder">
+                <label for="breeder">Питомник</label>
+                <input list="breeder" name="breeder" placeholder="Питомник">
+                <datalist id="breeder">
+                    <option value="MikkiStar" />
+                    <option value="MikkiStar" />
+                    <option value="MikkiStar" />
+                    <option value="MikkiStar" />
+                    <option value="MikkiStar" />
+                </datalist>
+            </fieldset>
+        </div>
+    </div>
+    <div class="container uk-margin-top filters clearfix">
+        <button class="btn btn-success searchFilter-apply pull-right" onclick="">Найти</button>
+        <button class="btn btn-warning searchFilter-apply pull-right"  onclick="">Сбросить фильтр</button>
     </div>
 </header>
 <!--content-->
@@ -149,92 +215,92 @@
             </div>
         </div>
     </div>
-    <div class="thumb-box3">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-md-10 col-lg-offset-2 col-md-offset-1">
-                    <p class="title wow fadeInUp animated">Welcome Message</p>
-                    <p class="wow fadeInUp animated" data-wow-delay="0.1s"><span>Beciegast nveriti vitaesaert asety kertya aset aplica binerafae kertyu estyasnemo faserani</span><br>ptaiades kertyaser daesraeds. Casrolern atur. Binsequuntur magni dolqui ratione volmsequi nesciu orbosas numquam eius modi teincidunt, ut labore et dolore magnam.</p>
-                    <a href="#" class="btn-default btn1 wow fadeInUp animated" data-wow-delay="0.2s">read more</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="thumb-box4">
-        <div class="container">
-            <p class="title wow fadeInUp animated">Fresh Videos</p>
-        </div>
-        <div class="box wow zoomIn animated" data-wow-delay="0.2s">
-            <figure>
-	            <a class="various iframe" href="http://www.youtube.com/embed/2kodXWejuy0?rel=0">
-		            <i></i>
-		            <img src="img/cats_main/2.jpg" alt="">
-	            </a>
-            </figure>
-        </div>
-        <div class="box wow zoomIn animated" data-wow-delay="0.1s" >
-            <figure>
-	            <a class="various iframe" href="http://www.youtube.com/embed/2kodXWejuy0?rel=0">
-		            <i></i>
-		            <img src="img/cats_main/2.jpg" alt="">
-	            </a>
-            </figure>
-        </div>
-        <div class="box wow zoomIn animated" >
-            <figure><a class="various iframe" href="http://www.youtube.com/embed/2kodXWejuy0?rel=0"><i></i><img src="img/cats_main/2.jpg" alt=""></a></figure>
-        </div>
-        <div class="box wow zoomIn animated" data-wow-delay="0.1s">
-            <figure><a class="various iframe" href="http://www.youtube.com/embed/2kodXWejuy0?rel=0"><i></i><img src="img/cats_main/2.jpg" alt=""></a></figure>
-        </div>
-        <div class="box wow zoomIn animated" data-wow-delay="0.2s" >
-            <figure><a class="various iframe" href="http://www.youtube.com/embed/2kodXWejuy0?rel=0"><i></i><img src="img/cats_main/2.jpg" alt=""></a></figure>
-        </div>
-    </div>
-    <div class="thumb-box5">
-        <div class="container">
+<!--     <div class="thumb-box3">
+    <div class="container">
+        <div class="row">
             <div class="col-lg-8 col-md-10 col-lg-offset-2 col-md-offset-1">
-                <p class="title wow fadeInUp animated" ><strong>We offer</strong> truly unique and exotic reptiles, lizards &amp; frogs</p>
-                <a href="#" class="btn-default btn2 wow fadeInUp animated" data-wow-delay="0.1s" >read more</a>
+                <p class="title wow fadeInUp animated">Welcome Message</p>
+                <p class="wow fadeInUp animated" data-wow-delay="0.1s"><span>Beciegast nveriti vitaesaert asety kertya aset aplica binerafae kertyu estyasnemo faserani</span><br>ptaiades kertyaser daesraeds. Casrolern atur. Binsequuntur magni dolqui ratione volmsequi nesciu orbosas numquam eius modi teincidunt, ut labore et dolore magnam.</p>
+                <a href="#" class="btn-default btn1 wow fadeInUp animated" data-wow-delay="0.2s">read more</a>
             </div>
         </div>
     </div>
-    <div class="thumb-box6">
-        <div class="container">
-            <div class="col-lg-3 col-md-3 wow fadeInUp animated" >
-                <p class="title">Reptiles For Sale</p>
-            </div>
-            <div class="col-lg-3 col-md-3 wow fadeInUp animated" data-wow-delay="0.1s">
-                <ul class="list1">
-                    <li><a href="#">Sit avertas dero</a></li>
-                    <li><a href="#">Taserto yaendala miaseay</a></li>
-                    <li><a href="#">Mertase deles neory kastreas</a></li>
-                    <li><a href="#">Verode fase laisuase</a></li>
-                    <li><a href="#">Dvertelero ferose</a></li>
-                    <li><a href="#">Baserto yniaser lasytras</a></li>
-                </ul>
-            </div>
-            <div class="col-lg-3 col-md-3 wow fadeInUp animated" data-wow-delay="0.2s" >
-                <ul class="list1">
-                    <li><a href="#">Verroit avertas</a></li>
-                    <li><a href="#">Niaseay aendala</a></li>
-                    <li><a href="#">Cweiheles kastreaseory</a></li>
-                    <li><a href="#">Fase laisu delas</a></li>
-                    <li><a href="#">Masyge rose mitas</a></li>
-                    <li><a href="#">Jasniaser deliuyas</a></li>
-                </ul>
-            </div>
-            <div class="col-lg-3 col-md-3 wow fadeInUp animated" data-wow-delay="0.3s" >
-                <ul class="list1">
-                    <li><a href="#">Derovert nuytasa</a></li>
-                    <li><a href="#">Verode fase laisuase</a></li>
-                    <li><a href="#">Dvertelero ferose</a></li>
-                    <li><a href="#">Baserto yniaser lasytras</a></li>
-                    <li><a href="#">Taserto yaendala miaseay</a></li>
-                    <li><a href="#">Sertaeleras neory</a></li>
-                </ul>
-            </div>
+</div>
+<div class="thumb-box4">
+    <div class="container">
+        <p class="title wow fadeInUp animated">Fresh Videos</p>
+    </div>
+    <div class="box wow zoomIn animated" data-wow-delay="0.2s">
+        <figure>
+                <a class="various iframe" href="http://www.youtube.com/embed/2kodXWejuy0?rel=0">
+                    <i></i>
+                    <img src="img/cats_main/2.jpg" alt="">
+                </a>
+        </figure>
+    </div>
+    <div class="box wow zoomIn animated" data-wow-delay="0.1s" >
+        <figure>
+                <a class="various iframe" href="http://www.youtube.com/embed/2kodXWejuy0?rel=0">
+                    <i></i>
+                    <img src="img/cats_main/2.jpg" alt="">
+                </a>
+        </figure>
+    </div>
+    <div class="box wow zoomIn animated" >
+        <figure><a class="various iframe" href="http://www.youtube.com/embed/2kodXWejuy0?rel=0"><i></i><img src="img/cats_main/2.jpg" alt=""></a></figure>
+    </div>
+    <div class="box wow zoomIn animated" data-wow-delay="0.1s">
+        <figure><a class="various iframe" href="http://www.youtube.com/embed/2kodXWejuy0?rel=0"><i></i><img src="img/cats_main/2.jpg" alt=""></a></figure>
+    </div>
+    <div class="box wow zoomIn animated" data-wow-delay="0.2s" >
+        <figure><a class="various iframe" href="http://www.youtube.com/embed/2kodXWejuy0?rel=0"><i></i><img src="img/cats_main/2.jpg" alt=""></a></figure>
+    </div>
+</div>
+<div class="thumb-box5">
+    <div class="container">
+        <div class="col-lg-8 col-md-10 col-lg-offset-2 col-md-offset-1">
+            <p class="title wow fadeInUp animated" ><strong>We offer</strong> truly unique and exotic reptiles, lizards &amp; frogs</p>
+            <a href="#" class="btn-default btn2 wow fadeInUp animated" data-wow-delay="0.1s" >read more</a>
         </div>
     </div>
+</div>
+<div class="thumb-box6">
+    <div class="container">
+        <div class="col-lg-3 col-md-3 wow fadeInUp animated" >
+            <p class="title">Reptiles For Sale</p>
+        </div>
+        <div class="col-lg-3 col-md-3 wow fadeInUp animated" data-wow-delay="0.1s">
+            <ul class="list1">
+                <li><a href="#">Sit avertas dero</a></li>
+                <li><a href="#">Taserto yaendala miaseay</a></li>
+                <li><a href="#">Mertase deles neory kastreas</a></li>
+                <li><a href="#">Verode fase laisuase</a></li>
+                <li><a href="#">Dvertelero ferose</a></li>
+                <li><a href="#">Baserto yniaser lasytras</a></li>
+            </ul>
+        </div>
+        <div class="col-lg-3 col-md-3 wow fadeInUp animated" data-wow-delay="0.2s" >
+            <ul class="list1">
+                <li><a href="#">Verroit avertas</a></li>
+                <li><a href="#">Niaseay aendala</a></li>
+                <li><a href="#">Cweiheles kastreaseory</a></li>
+                <li><a href="#">Fase laisu delas</a></li>
+                <li><a href="#">Masyge rose mitas</a></li>
+                <li><a href="#">Jasniaser deliuyas</a></li>
+            </ul>
+        </div>
+        <div class="col-lg-3 col-md-3 wow fadeInUp animated" data-wow-delay="0.3s" >
+            <ul class="list1">
+                <li><a href="#">Derovert nuytasa</a></li>
+                <li><a href="#">Verode fase laisuase</a></li>
+                <li><a href="#">Dvertelero ferose</a></li>
+                <li><a href="#">Baserto yniaser lasytras</a></li>
+                <li><a href="#">Taserto yaendala miaseay</a></li>
+                <li><a href="#">Sertaeleras neory</a></li>
+            </ul>
+        </div>
+    </div>
+</div> -->
     <div class="stellar-section">
         <div class="thumb-box7" data-stellar-background-ratio="-0.2">
             <div class="container">
@@ -294,14 +360,18 @@
 <!--footer-->
 <footer> 
     <div class="container">
-        <p class="wow fadeInUp animated">© <em id="copyright-year">2015</em> <span></span> <a href="index-5.html">Py</a></p>
-        <ul class="foo_menu wow fadeInUp animated" data-wow-delay="0.1s" >
-            <li class="active"><a href="index.html">main</a></li>
+        <p class="wow fadeInUp animated pull-left">Â© <em id="copyright-year">2015</em> <span></span> <a href="index-5.html">Py</a></p>
+        <ul class="foo_menu wow fadeInUp animated pull-right" data-wow-delay="0.1s" >
             <li><a href="index-1.html">about</a></li>
-            <li><a href="index-2.html">for sale</a></li>
-            <li><a href="index-3.html">tips &amp; advice</a></li>
             <li><a href="index-4.html">contacts</a></li>
         </ul>
+        <ul class="follow_icon wow fadeInUp animated animated pull-right" style="visibility: visible; animation-name: fadeInUp;">
+            <li><a href="#" class="fa fa-linkedin"></a></li>
+            <li><a href="#" class="fa fa-google-plus"></a></li>
+            <li><a href="#" class="fa fa-facebook"></a></li>
+            <li><a href="#" class="fa fa-rss"></a></li>
+        </ul>
+
     </div>
   <!-- {%FOOTER_LINK} -->
 </footer>
