@@ -120,7 +120,7 @@ header {
 	border-bottom: 1px solid #f0f0f0;
 }
 header .box {
-	padding: 38px 0 51px 0;
+	padding: 10px 0 10px 0;
 	background: url(../img/pattern.png) repeat;
 }
 /* menu
@@ -130,7 +130,7 @@ nav.tm_navbar {
 	z-index: 1;
 	border: none;
 	padding: 0;
-	margin: 38px 0;
+	/*margin: 38px 0;*/
 	float: none;
 	min-height: 0;
 	background: none;
@@ -307,6 +307,13 @@ nav.tm_navbar .sub-menu > ul li > ul li a:hover {
 }
 .select-menu {
 	display: none !important;
+}
+/*========================================================
+                    -Filters-
+=========================================================*/
+[class*='searchFilter'] input, [class*='searchFilter'] label {
+	display: inline-block;
+	font-size: 12px;
 }
 /*========================================================
                     -Content-

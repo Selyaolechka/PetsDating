@@ -62,33 +62,87 @@
 <header>
     <div class="box">
         <div class="container">
-            <h1 class="navbar-brand navbar-brand_ wow fadeInDown animated" data-wow-delay="0.2s">
-            	<a href="index.html"><img src="img/logo.png" alt="logo"></a>
+            <h1 class="navbar-brand navbar-brand_ wow fadeInDown animated pull-left" data-wow-delay="0.2s">
+            	<a href="index.html"><img src="img/icons/logo.png" alt="logo"></a>
             </h1>
+            <nav class="navbar navbar-default navbar-static-top tm_navbar clearfix pull-left" role="navigation">
+                <ul class="nav sf-menu clearfix sf-js-enabled sf-arrows">
+                    <li class="active"><a href="index.html">Поиск Анкет</a></li>
+                    <li class="sub-menu"><a href="index-1.html" class="sf-with-ul">Анонс событий</a><span></span>
+                        <ul class="submenu sub-menu">
+                            <li><a href="#">staff</a></li>
+                            <li><a href="#" class="sf-with-ul">history</a><span class="fa fa-angle-right"></span>
+                                <ul class="submenu sub-menu">
+                                    <li><a href="#">fresh</a></li>
+                                    <li><a href="#">archive</a></li>
+                                </ul> 
+                            </li>
+                            <li><a href="#">news</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="index-2.html">Статьи</a></li>
+                </ul>
+            </nav>
         </div>
     </div>
-    <div class="container">
-        <nav class="navbar navbar-default navbar-static-top tm_navbar clearfix" role="navigation">
-            <ul class="nav sf-menu clearfix sf-js-enabled sf-arrows">
-                <li class="active"><a href="index.html">main</a></li>
-                <li class="sub-menu"><a href="index-1.html" class="sf-with-ul">about</a><span></span>
-                    <ul class="submenu sub-menu">
-        				<li><a href="#">staff</a></li>
-        				<li><a href="#" class="sf-with-ul">history</a><span class="fa fa-angle-right"></span>
-                            <ul class="submenu sub-menu">
-                                <li><a href="#">fresh</a></li>
-                                <li><a href="#">archive</a></li>
-                            </ul> 
-                        </li>
-        				<li><a href="#">news</a></li>
-        			</ul>
-                </li>
-                <li><a href="index-2.html">for sale</a></li>
-                <li><a href="index-3.html">tips &amp; advice</a></li>
-                <li><a href="index-4.html">contacts</a></li>
-            </ul>
-        </nav>
-    </div>
+            <div class="container">
+                <div class="col-lg-3 col-md-6 col-sm-10">
+                    <fieldset class="searchFilter-breed">
+                        <label for="breed">Порода</label>
+                        <input list="breed" name="breed">
+                        <datalist id="breed">
+                            <option value="Канадский сфинкс" />
+                            <option value="Бенгальская" />
+                            <option value="Аббисинская" />
+                            <option value="Мейн-кун" />
+                            <option value="Сиамская" />
+                        </datalist>
+                    </fieldset>
+                </div>
+                <div class="col-lg-2 col-md-6 col-sm-10">
+                    <fieldset class="searchFilter-sex">
+                        <label for="sex">Пол</label>
+                        <select id="sex" name="sex">
+                            <option value="male"> Самец</option>
+                            <option value="female">Самочка</option>
+                        </select>
+                    </fieldset>
+                </div>
+                <div class="col-lg-1 col-md-6 col-sm-10">
+                    <fieldset class="searchFilter-age">
+                        <label for="age">Возраст</label>
+                        <input type="number" id="age" min="1" max="10" step="1" value="1" placeholder="Возраст">
+                    </fieldset>
+                </div>        
+                <div class="col-lg-3 col-md-6 col-sm-10">
+                    <fieldset class="searchFilter-city">
+                        <label for="city">Город</label>
+                        <input list="city" name="city">
+                        <datalist id="city">
+                            <option value="Киев" />
+                            <option value="Одесса" />
+                            <option value="Днепропетровск" />
+                            <option value="Харьков" />
+                            <option value="Львов" />
+                        </datalist>
+                    </fieldset>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-10">
+                    <fieldset class="searchFilter-city">
+                        <label for="city">Питомник</label>
+                        <input list="city" name="city">
+                        <datalist id="city">
+                            <option value="MikkiStar" />
+                            <option value="MikkiStar" />
+                            <option value="MikkiStar" />
+                            <option value="MikkiStar" />
+                            <option value="MikkiStar" />
+                        </datalist>
+                    </fieldset>
+                </div>
+                <div class="btn btn-blue searchFilter-apply" onclick="peopleFeatures.filter.applyClick();">Найти</div>
+            </div>
+        </div>
 </header>
 <!--content-->
 <div class="content"> 
